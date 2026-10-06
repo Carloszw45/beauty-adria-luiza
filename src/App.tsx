@@ -1,11 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
-import { CalendarDays, Check, Clock3, CreditCard, Download, Heart, Phone, ShieldCheck, Sparkles, X } from "lucide-react";
+import { CalendarDays, Check, Clock3, CreditCard, Download, Heart, MessageCircle, ShieldCheck, Sparkles, X } from "lucide-react";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { services, money, type Service } from "@/lib/catalog";
 
-const contactPhone = { label: "(31) 9314-7285", href: "tel:+553193147285" };
+const contactPhone = { label: "(31) 9314-7285", href: "https://wa.me/553193147285" };
 
 type Details = { name: string; phone: string; date: string; time: string };
 type Receipt = { id: string; code: string; serviceId: string; serviceName: string; totalCents: number; name: string; date: string; time: string; status: string };
@@ -115,7 +115,7 @@ export default function Home() {
             <p className="hero-description">Realce sua beleza com um atendimento delicado e um olhar pensado para você.</p>
             <a className="button primary hero-button" href="#catalogo">Ver catálogo <Sparkles size={17} strokeWidth={1.5} /></a>
             <div className="hero-note"><span /> Cílios &amp; sobrancelhas</div>
-            <a className="contact-link hero-contact" href={contactPhone.href} aria-label={`Ligar para Beauty Adria Luíza: ${contactPhone.label}`}><Phone size={16} strokeWidth={1.5} aria-hidden="true" /> Ligar: {contactPhone.label}</a>
+            <a className="contact-link hero-contact" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Beauty Adria Luíza: ${contactPhone.label}`}><MessageCircle size={16} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a>
           </div>
           <div className="hero-visual" aria-label="Detalhe do procedimento de extensão de cílios">
             <div className="hero-orbit" aria-hidden="true" />
@@ -137,7 +137,7 @@ export default function Home() {
         </section>
         <section className="care-note" aria-label="Informações sobre o atendimento"><Heart size={23} strokeWidth={1.2} /><div><h2>Um momento só seu.</h2><p>Escolha seu procedimento com calma. O horário será combinado com você após a solicitação.</p></div></section>
       </main>
-      <footer className="site-footer"><a className="brand" href="#inicio"><span>Beauty Adria Luíza</span><small>LASH DESIGNER</small></a><div className="footer-contact"><p>Beleza que respeita a sua essência.</p><a className="contact-link" href={contactPhone.href} aria-label={`Ligar para Beauty Adria Luíza: ${contactPhone.label}`}><Phone size={15} strokeWidth={1.5} aria-hidden="true" /> {contactPhone.label}</a></div><button className="motion-toggle" onClick={() => setMotion(!motion)} aria-pressed={!motion}>{motion ? "Pausar" : "Ativar"} animação da flor</button></footer>
+      <footer className="site-footer"><a className="brand" href="#inicio"><span>Beauty Adria Luíza</span><small>LASH DESIGNER</small></a><div className="footer-contact"><p>Beleza que respeita a sua essência.</p><a className="contact-link" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Beauty Adria Luíza: ${contactPhone.label}`}><MessageCircle size={15} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a></div><button className="motion-toggle" onClick={() => setMotion(!motion)} aria-pressed={!motion}>{motion ? "Pausar" : "Ativar"} animação da flor</button></footer>
       <Dialog open={!!selected} onOpenChange={(open) => { if (!open && !busy) setSelected(null); }}>
         <DialogContent ref={dialogRef} className="checkout-dialog" showCloseButton={false} onEscapeKeyDown={(event) => { if (busy) event.preventDefault(); }} onInteractOutside={(event) => { if (busy) event.preventDefault(); }}>
           <DialogClose className="checkout-close" disabled={busy} aria-label="Fechar checkout"><X size={20} /></DialogClose>
