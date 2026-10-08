@@ -6,6 +6,7 @@ import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } fr
 import { services, money, type Service } from "@/lib/catalog";
 
 const contactPhone = { label: "(31) 9314-7285", href: "https://wa.me/553193147285" };
+const bouquetQuoteHref = `${contactPhone.href}?text=${encodeURIComponent("Olá! Gostaria de consultar o valor de um Buquê personalizado na Sindy_Designer.")}`;
 
 type Details = { name: string; phone: string; date: string; time: string };
 type Receipt = { id: string; code: string; serviceId: string; serviceName: string; totalCents: number; name: string; date: string; time: string; status: string };
@@ -28,7 +29,7 @@ function newRequestId() {
   return `${hex.slice(0,8)}-${hex.slice(8,12)}-${hex.slice(12,16)}-${hex.slice(16,20)}-${hex.slice(20)}`;
 }
 function ServicePhoto({ service, className = "" }: { service: Service; className?: string }) {
-  if (service.photoTop === null) return <div className={`monogram ${className}`} aria-hidden="true"><span>AL</span><small>LASH DESIGNER</small></div>;
+  if (service.photoTop === null) return <div className={`monogram ${className}`} aria-hidden="true"><span>SD</span><small>LASH DESIGNER</small></div>;
   return <div className={`photo-circle ${className}`}><img src={`${import.meta.env.BASE_URL}assets/service-reference.jpg`} alt={service.alt} width="691" height="1536" style={{ top: `${-(service.photoTop / 218) * 100}%` }} /></div>;
 }
 export default function Home() {
@@ -53,7 +54,7 @@ export default function Home() {
     try {
       Promise.resolve(context.registerTool({
         name: "start_service_checkout",
-        title: "Escolher serviço da Beauty Adria Luíza",
+        title: "Escolher serviço da Sindy_Designer",
         description: "Abre o checkout de um serviço. A cliente precisa preencher os dados e enviar a solicitação; esta ação não faz reserva nem cobrança.",
         inputSchema: { type: "object", properties: { serviceId: { type: "string", enum: services.map(s => s.id) } }, required: ["serviceId"], additionalProperties: false },
         annotations: { readOnlyHint: false, untrustedContentHint: false },
@@ -93,9 +94,9 @@ export default function Home() {
   }
   function downloadReceipt() {
     if (!receipt) return;
-    const text = `BEAUTY ADRIA LUÍZA · LASH DESIGNER\nSOLICITAÇÃO DE ATENDIMENTO\n\nCódigo: ${receipt.code}\nCliente: ${receipt.name}\nServiço: ${receipt.serviceName}\nValor: ${money(receipt.totalCents)}\nData desejada: ${displayDate(receipt.date)}\nHorário desejado: ${receipt.time}\nPagamento: no atendimento\n\nStatus: aguardando confirmação do horário.\nEsta solicitação não é uma reserva confirmada nem um comprovante de pagamento.`;
+    const text = `SINDY_DESIGNER · LASH DESIGNER\nSOLICITAÇÃO DE ATENDIMENTO\n\nCódigo: ${receipt.code}\nCliente: ${receipt.name}\nServiço: ${receipt.serviceName}\nValor: ${money(receipt.totalCents)}\nData desejada: ${displayDate(receipt.date)}\nHorário desejado: ${receipt.time}\nPagamento: no atendimento\n\nStatus: aguardando confirmação do horário.\nEsta solicitação não é uma reserva confirmada nem um comprovante de pagamento.`;
     const url = URL.createObjectURL(new Blob([text], { type: "text/plain;charset=utf-8" }));
-    const anchor = document.createElement("a"); anchor.href = url; anchor.download = `beauty-adria-luiza-${receipt.code}.txt`; anchor.click();
+    const anchor = document.createElement("a"); anchor.href = url; anchor.download = `sindy-designer-${receipt.code}.txt`; anchor.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   return (
@@ -103,19 +104,19 @@ export default function Home() {
       <div className="botanical-background" aria-hidden="true"><img src={`${import.meta.env.BASE_URL}assets/flower.webp`} width="1024" height="1536" alt="" /></div>
       <a className="skip-link" href="#catalogo">Ir para os serviços</a>
       <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Beauty Adria Luíza, início"><span>Beauty Adria Luíza</span><small>LASH DESIGNER</small></a>
+        <a className="brand" href="#inicio" aria-label="Sindy_Designer, início"><span>Sindy_Designer</span><small>LASH DESIGNER</small></a>
         <nav aria-label="Menu principal"><a href="#catalogo">Serviços</a><a className="nav-booking" href="#catalogo">Agendar atendimento</a></nav>
       </header>
       <main>
         <section className="hero" id="inicio" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">BELEZA · ELEGÂNCIA · AUTOESTIMA</p>
-            <h1 id="hero-title"><span className="hero-brand-prefix">Beauty</span> Adria Luíza</h1>
+            <h1 id="hero-title">Sindy_Designer</h1>
             <h2>Seu olhar,<br /><em>sua essência.</em></h2>
             <p className="hero-description">Realce sua beleza com um atendimento delicado e um olhar pensado para você.</p>
             <a className="button primary hero-button" href="#catalogo">Ver catálogo <Sparkles size={17} strokeWidth={1.5} /></a>
-            <div className="hero-note"><span /> Cílios &amp; sobrancelhas</div>
-            <a className="contact-link hero-contact" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Beauty Adria Luíza: ${contactPhone.label}`}><MessageCircle size={16} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a>
+            <div className="hero-note"><span /> Cílios, sobrancelhas &amp; buquês</div>
+            <a className="contact-link hero-contact" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Sindy_Designer: ${contactPhone.label}`}><MessageCircle size={16} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a>
           </div>
           <div className="hero-visual" aria-label="Detalhe do procedimento de extensão de cílios">
             <div className="hero-orbit" aria-hidden="true" />
@@ -126,22 +127,26 @@ export default function Home() {
         </section>
         <div className="signature-line" aria-hidden="true"><span /><Sparkles size={20} strokeWidth={1} /><span /></div>
         <section className="catalog" id="catalogo" aria-labelledby="catalog-title">
-          <div className="section-heading"><p className="eyebrow">ESCOLHA SEU CUIDADO</p><h2 id="catalog-title">Meus serviços</h2><p>Seu próximo momento de beleza começa aqui.</p></div>
+          <div className="section-heading"><p className="eyebrow">ESCOLHA SEU CUIDADO</p><h2 id="catalog-title">Meu catálogo</h2><p>Cuidados de beleza e detalhes para presentear.</p></div>
           <div className="service-grid">
             {services.map((service, index) => <article className={`service-card card-${service.id}`} key={service.id}>
               <div className="service-visual"><ServicePhoto service={service} /><span className="service-category">{service.category}</span></div>
               <div className="service-body"><span className="service-number">0{index + 1}</span><h3>{service.name}</h3><p>{service.description}</p><div className="service-duration"><Clock3 size={14} strokeWidth={1.5} />{service.duration}</div><div className="service-bottom"><strong>{money(service.price)}</strong><button className="button primary" onClick={() => openCheckout(service)} aria-label={`Quero agendar ${service.name}`}>Quero agendar</button></div></div>
             </article>)}
+            <article className="service-card card-buque-personalizado" aria-labelledby="bouquet-title">
+              <div className="service-visual"><div className="bouquet-art"><img src={`${import.meta.env.BASE_URL}assets/bouque.svg`} alt="Ilustração de um buquê de flores" width="280" height="300" loading="lazy" /></div><span className="service-category">BUQUÊS</span></div>
+              <div className="service-body"><span className="service-number">06</span><h3 id="bouquet-title">Buquê personalizado</h3><p>Um presente especial, com flores e detalhes escolhidos do seu jeito.</p><div className="service-duration"><MessageCircle size={14} strokeWidth={1.5} /> Personalização a combinar</div><div className="service-bottom"><strong>Sob consulta</strong><a className="button primary" href={bouquetQuoteHref} target="_blank" rel="noopener noreferrer" aria-label="Consultar o valor do Buquê personalizado pelo WhatsApp"><MessageCircle size={15} aria-hidden="true" /> Consultar valor</a></div></div>
+            </article>
           </div>
           <p className="catalog-footnote"><CalendarDays size={16} strokeWidth={1.5} /> Escolha o serviço e envie sua preferência de horário.</p>
         </section>
         <section className="care-note" aria-label="Informações sobre o atendimento"><Heart size={23} strokeWidth={1.2} /><div><h2>Um momento só seu.</h2><p>Escolha seu procedimento com calma. O horário será combinado com você após a solicitação.</p></div></section>
       </main>
-      <footer className="site-footer"><a className="brand" href="#inicio"><span>Beauty Adria Luíza</span><small>LASH DESIGNER</small></a><div className="footer-contact"><p>Beleza que respeita a sua essência.</p><a className="contact-link" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Beauty Adria Luíza: ${contactPhone.label}`}><MessageCircle size={15} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a></div><button className="motion-toggle" onClick={() => setMotion(!motion)} aria-pressed={!motion}>{motion ? "Pausar" : "Ativar"} animação da flor</button></footer>
+      <footer className="site-footer"><a className="brand" href="#inicio"><span>Sindy_Designer</span><small>LASH DESIGNER</small></a><div className="footer-contact"><p>Beleza que respeita a sua essência.</p><a className="contact-link" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Sindy_Designer: ${contactPhone.label}`}><MessageCircle size={15} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a></div><button className="motion-toggle" onClick={() => setMotion(!motion)} aria-pressed={!motion}>{motion ? "Pausar" : "Ativar"} animação da flor</button></footer>
       <Dialog open={!!selected} onOpenChange={(open) => { if (!open && !busy) setSelected(null); }}>
         <DialogContent ref={dialogRef} className="checkout-dialog" showCloseButton={false} onEscapeKeyDown={(event) => { if (busy) event.preventDefault(); }} onInteractOutside={(event) => { if (busy) event.preventDefault(); }}>
           <DialogClose className="checkout-close" disabled={busy} aria-label="Fechar checkout"><X size={20} /></DialogClose>
-          <div className="checkout-brand">Beauty Adria Luíza</div>
+          <div className="checkout-brand">Sindy_Designer</div>
           <DialogTitle className="checkout-title">{step === "success" ? "Solicitação recebida" : step === "review" ? "Confira seu atendimento" : "Seu momento de beleza"}</DialogTitle>
           <DialogDescription className="checkout-description">{step === "success" ? "Seu horário ainda será confirmado." : step === "review" ? "Revise os detalhes antes de enviar." : "Preencha seus dados e escolha o horário desejado."}</DialogDescription>
           <div className="checkout-steps" aria-label="Etapas do checkout"><span className="active">1. Seus dados</span><i /><span className={step !== "details" ? "active" : ""}>2. Resumo</span><i /><span className={step === "success" ? "active" : ""}>3. Pronto</span></div>

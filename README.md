@@ -1,6 +1,6 @@
-# Beauty Adria Luíza · Lash Designer
+# Sindy_Designer · Lash Designer
 
-Site responsivo com catálogo de cílios e sobrancelhas, flor animada ao fundo e checkout de solicitação de atendimento. Os valores são os fornecidos nas imagens de referência.
+Site responsivo com catálogo de cílios, sobrancelhas e buquês personalizados, flor animada ao fundo e checkout de solicitação de atendimento. Os valores dos procedimentos são os fornecidos nas imagens de referência. O Buquê personalizado tem preço sob consulta e botão para solicitar orçamento pelo WhatsApp.
 
 ## Publicação no GitHub Pages
 

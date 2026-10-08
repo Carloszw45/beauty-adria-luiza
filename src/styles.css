@@ -93,6 +93,15 @@ h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500}
 .card-brasileiro .service-body,.card-hollywood .service-body{flex:1}
 .card-brasileiro .service-body>p,.card-hollywood .service-body>p{min-height:0}
 .card-brasileiro .service-bottom,.card-hollywood .service-bottom{margin-top:14px;gap:9px}
+.card-buque-personalizado{grid-column:1/-1;display:grid;grid-template-columns:30% minmax(0,1fr)}
+.card-buque-personalizado .service-visual{min-height:245px}
+.card-buque-personalizado .service-body{align-self:center;padding:28px 35px}
+.card-buque-personalizado .service-body h3{font-size:35px}
+.card-buque-personalizado .service-body>p{min-height:0;max-width:470px}
+.card-buque-personalizado .service-bottom{flex-direction:row;align-items:center;justify-content:space-between;gap:20px}
+.card-buque-personalizado .service-bottom .button{width:auto;flex-shrink:0}
+.bouquet-art{display:grid;place-items:center;width:160px;max-width:100%;aspect-ratio:1;border-radius:50%;background:#faf3e4;outline:1px solid #be9b56;outline-offset:4px;box-shadow:0 10px 25px #76512318}
+.bouquet-art img{width:90%;height:90%;object-fit:contain}
 .catalog-footnote{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:28px;font-size:12px;color:#887766;text-align:center}
 .care-note{display:flex;align-items:center;justify-content:center;gap:23px;max-width:690px;margin:75px auto 69px;text-align:left;padding:0 24px;color:var(--wine)}
 .care-note>svg{flex-shrink:0}
@@ -176,8 +185,8 @@ h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.botanical-background img{transform:rotate(-3deg);will-change:auto}}
 
 
-/* Fit the updated brand name at every size. */
-.hero-brand-prefix{display:block;font-family:Manrope,Arial,sans-serif;font-size:14px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;line-height:1.5;margin:12px 0 5px;color:var(--wine)}
+/* Fit the brand and the bouquet card at every size. */
+.hero h1{font-size:clamp(64px,7.6vw,102px);white-space:nowrap}
 .site-header .brand{min-width:0}
-@media(max-width:720px){.site-header .brand{align-items:flex-start;flex:1}.site-header .brand span{font-size:24px;line-height:1.1}.site-header nav{flex-shrink:0}.hero h1{font-size:clamp(65px,20.5vw,82px)}.hero-brand-prefix{font-size:12px;margin:13px 0 7px}.checkout-brand{font-size:29px;padding-right:30px}}
-@media(max-width:370px){.site-header .brand span{font-size:21px}.site-header{gap:12px}.hero h1{font-size:clamp(56px,19.7vw,72px)}}
+@media(max-width:720px){.site-header .brand{align-items:flex-start;flex:1}.site-header .brand span{font-size:26px;line-height:1.1}.site-header nav{flex-shrink:0}.hero h1{font-size:clamp(45px,15.5vw,67px)}.checkout-brand{font-size:29px;padding-right:30px}.card-buque-personalizado{grid-template-columns:34% minmax(0,1fr)}.card-buque-personalizado .service-visual{min-height:230px}.card-buque-personalizado .service-body{padding:24px 15px 20px;align-self:stretch}.card-buque-personalizado .service-body h3{font-size:27px}.card-buque-personalizado .service-bottom{flex-direction:column;align-items:flex-start;gap:9px}.card-buque-personalizado .service-bottom .button{width:100%;max-width:180px;gap:7px}.card-buque-personalizado .service-bottom strong{font-size:22px}.bouquet-art{width:calc(100% - 5px);max-width:127px}}
+@media(max-width:370px){.site-header .brand span{font-size:23px}.site-header{gap:12px}.card-buque-personalizado{grid-template-columns:31% minmax(0,1fr)}.card-buque-personalizado .service-body{padding-left:13px;padding-right:12px}.card-buque-personalizado .service-body h3{font-size:24px}}
