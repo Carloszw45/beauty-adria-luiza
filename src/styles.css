@@ -30,7 +30,7 @@ h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500}
 .skip-link:focus{transform:translateY(0)}
 .site-header{width:min(1140px,calc(100% - 72px));margin:auto;min-height:114px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid #ba9a683d}
 .brand{display:flex;flex-direction:column;align-items:center;color:var(--wine)}
-.brand span{font-family:Italianno,Georgia,serif;font-size:42px;line-height:.95}
+.brand>span{font-family:Italianno,Georgia,serif;font-size:42px;line-height:.95}
 .brand small{font-size:12px;letter-spacing:.21em;margin-top:7px;color:#77634c}
 .site-header nav{display:flex;align-items:center;gap:35px;font-size:14px}
 .site-header nav a:first-child:hover{color:var(--wine)}
@@ -108,7 +108,7 @@ h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500}
 .care-note h2{font-size:30px;line-height:1.2}
 .care-note p{font-size:14px;color:#837268;margin-top:6px;line-height:1.8}
 .site-footer{display:flex;align-items:center;justify-content:space-between;gap:25px;width:min(1120px,calc(100% - 72px));margin:0 auto;padding:29px 0;border-top:1px solid #ba9a683d}
-.site-footer .brand span{font-size:35px}
+.site-footer .brand>span{font-size:35px}
 .site-footer .brand small{font-size:10px}
 .site-footer p{font-family:Cormorant,Georgia,serif;font-size:18px;font-style:italic;color:#9a8264}
 .footer-contact{text-align:center}
@@ -171,7 +171,7 @@ h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500}
 @media(min-width:1450px){.botanical-background img{right:calc((100vw - 1280px)/2 - 140px);width:560px}}
 @media(max-width:1000px){.hero{gap:25px;margin-top:45px;width:calc(100% - 72px)}.hero h1{font-size:97px}.hero h2{font-size:49px}.hero-photo{width:270px}.hero-visual{min-height:415px}.hero-orbit{inset:43px 0 55px}.hero-seal{right:-5px;bottom:52px;width:96px;height:96px}.service-grid{gap:17px}.service-body{padding:22px 17px 19px}.service-body h3{font-size:25px}.service-visual .photo-circle{width:125px}.card-brasileiro .service-visual,.card-hollywood .service-visual{width:35%}.card-brasileiro .photo-circle,.card-hollywood .photo-circle{width:110px}.service-bottom strong{font-size:21px}}
 @media(max-width:720px){
-.site-header{width:calc(100% - 40px);min-height:90px;gap:16px}.brand span{font-size:34px}.brand small{font-size:10px}.site-header nav{gap:0}.site-header nav>a:first-child{display:none}.nav-booking{font-size:12px;padding:9px 14px}
+.site-header{width:calc(100% - 40px);min-height:90px;gap:16px}.brand>span{font-size:34px}.brand small{font-size:10px}.site-header nav{gap:0}.site-header nav>a:first-child{display:none}.nav-booking{font-size:12px;padding:9px 14px}
 .hero{width:calc(100% - 48px);grid-template-columns:1fr;gap:15px;margin:39px auto 35px;min-height:0;text-align:center}.hero-copy .eyebrow{font-size:12px;letter-spacing:.08em}.hero h1{font-size:90px;margin:15px 0 0;line-height:1.07}.hero h2{font-size:41px;line-height:1.08}.hero h2 br{display:none}.hero h2 em{display:block}.hero-description{font-size:16px;margin:20px auto 0;max-width:335px;line-height:1.8}.hero-button{margin-top:24px;padding:14px 27px;font-size:14px;min-width:186px}.hero-note{justify-content:center;font-size:12px;margin-top:17px}
 .hero-visual{min-height:265px;width:285px;max-width:100%;margin:12px auto 0}.hero-photo{width:213px;outline-width:6px}.hero-orbit{inset:8px 21px 26px}.hero-seal{width:77px;height:77px;right:8px;bottom:36px;gap:5px}.hero-seal svg{width:15px;height:15px}.hero-seal span{font-size:14px}.photo-caption{font-size:17px;bottom:-8px}
 .signature-line{width:calc(100% - 48px);gap:17px}.catalog{width:calc(100% - 36px);margin:42px auto 0}.section-heading{margin-bottom:27px}.section-heading .eyebrow{font-size:12px}.section-heading h2{font-size:43px;margin:9px 0 12px}.section-heading>p:last-child{font-size:14px;max-width:280px;margin:0 auto}
@@ -181,12 +181,15 @@ h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500}
 .site-footer{width:calc(100% - 44px);flex-direction:column;gap:14px;padding:25px 0 18px}.site-footer p{font-size:17px}.motion-toggle{font-size:12px}.botanical-background img{width:335px;right:-102px;top:30vh;opacity:.26}
 .checkout-dialog{padding:26px 21px!important;border-radius:22px!important}.checkout-title{font-size:29px!important}.checkout-steps{font-size:12px;gap:6px}.selected-service>b{font-size:14px}.selected-service strong{font-size:20px}.selected-service{padding:10px;gap:9px}.selected-service .photo-circle,.selected-service .monogram{width:44px}.checkout-brand{font-size:33px}.checkout-description{font-size:14px!important}.field-row{gap:11px}.checkout-close{right:13px;top:13px}
 }
-@media(max-width:370px){.hero h1{font-size:80px}.hero h2{font-size:38px}.service-card,.card-brasileiro,.card-hollywood{grid-template-columns:31% minmax(0,1fr)}.service-body,.card-brasileiro .service-body,.card-hollywood .service-body{padding-left:13px;padding-right:12px}.service-body h3{font-size:24px}.service-visual{padding-left:6px;padding-right:6px}.service-category{font-size:10px;letter-spacing:0}.selected-service>b{font-size:13px}.selected-service strong{font-size:18px}.checkout-dialog{padding:24px 17px!important}.brand span{font-size:30px}.nav-booking{font-size:12px;padding:8px 12px}}
+@media(max-width:370px){.hero h1{font-size:80px}.hero h2{font-size:38px}.service-card,.card-brasileiro,.card-hollywood{grid-template-columns:31% minmax(0,1fr)}.service-body,.card-brasileiro .service-body,.card-hollywood .service-body{padding-left:13px;padding-right:12px}.service-body h3{font-size:24px}.service-visual{padding-left:6px;padding-right:6px}.service-category{font-size:10px;letter-spacing:0}.selected-service>b{font-size:13px}.selected-service strong{font-size:18px}.checkout-dialog{padding:24px 17px!important}.brand>span{font-size:30px}.nav-booking{font-size:12px;padding:8px 12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.botanical-background img{transform:rotate(-3deg);will-change:auto}}
 
 
 /* Fit the brand and the bouquet card at every size. */
 .hero h1{font-size:clamp(64px,7.6vw,102px);white-space:nowrap}
 .site-header .brand{min-width:0}
-@media(max-width:720px){.site-header .brand{align-items:flex-start;flex:1}.site-header .brand span{font-size:26px;line-height:1.1}.site-header nav{flex-shrink:0}.hero h1{font-size:clamp(45px,15.5vw,67px)}.checkout-brand{font-size:29px;padding-right:30px}.card-buque-personalizado{grid-template-columns:34% minmax(0,1fr)}.card-buque-personalizado .service-visual{min-height:230px}.card-buque-personalizado .service-body{padding:24px 15px 20px;align-self:stretch}.card-buque-personalizado .service-body h3{font-size:27px}.card-buque-personalizado .service-bottom{flex-direction:column;align-items:flex-start;gap:9px}.card-buque-personalizado .service-bottom .button{width:100%;max-width:180px;gap:7px}.card-buque-personalizado .service-bottom strong{font-size:22px}.bouquet-art{width:calc(100% - 5px);max-width:127px}}
-@media(max-width:370px){.site-header .brand span{font-size:23px}.site-header{gap:12px}.card-buque-personalizado{grid-template-columns:31% minmax(0,1fr)}.card-buque-personalizado .service-body{padding-left:13px;padding-right:12px}.card-buque-personalizado .service-body h3{font-size:24px}}
+@media(max-width:720px){.site-header .brand{align-items:flex-start;flex:1}.site-header .brand>span{font-size:26px;line-height:1.1}.site-header nav{flex-shrink:0}.hero h1{font-size:clamp(45px,15.5vw,67px)}.checkout-brand{font-size:29px;padding-right:30px}.card-buque-personalizado{grid-template-columns:34% minmax(0,1fr)}.card-buque-personalizado .service-visual{min-height:230px}.card-buque-personalizado .service-body{padding:24px 15px 20px;align-self:stretch}.card-buque-personalizado .service-body h3{font-size:27px}.card-buque-personalizado .service-bottom{flex-direction:column;align-items:flex-start;gap:9px}.card-buque-personalizado .service-bottom .button{width:100%;max-width:180px;gap:7px}.card-buque-personalizado .service-bottom strong{font-size:22px}.bouquet-art{width:calc(100% - 5px);max-width:127px}}
+@media(max-width:370px){.site-header .brand>span{font-size:23px}.site-header{gap:12px}.card-buque-personalizado{grid-template-columns:31% minmax(0,1fr)}.card-buque-personalizado .service-body{padding-left:13px;padding-right:12px}.card-buque-personalizado .service-body h3{font-size:24px}}
+
+/* Use a visible underscore because the script font has an empty glyph. */
+.brand-separator{font-family:Georgia,serif;font-size:.6em;font-style:normal;line-height:inherit}

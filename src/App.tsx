@@ -8,6 +8,10 @@ import { services, money, type Service } from "@/lib/catalog";
 const contactPhone = { label: "(31) 9314-7285", href: "https://wa.me/553193147285" };
 const bouquetQuoteHref = `${contactPhone.href}?text=${encodeURIComponent("Olá! Gostaria de consultar o valor de um Buquê personalizado na Sindy_Designer.")}`;
 
+function BrandName() {
+  return <>Sindy<span className="brand-separator">_</span>Designer</>;
+}
+
 type Details = { name: string; phone: string; date: string; time: string };
 type Receipt = { id: string; code: string; serviceId: string; serviceName: string; totalCents: number; name: string; date: string; time: string; status: string };
 
@@ -104,14 +108,14 @@ export default function Home() {
       <div className="botanical-background" aria-hidden="true"><img src={`${import.meta.env.BASE_URL}assets/flower.webp`} width="1024" height="1536" alt="" /></div>
       <a className="skip-link" href="#catalogo">Ir para os serviços</a>
       <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Sindy_Designer, início"><span>Sindy_Designer</span><small>LASH DESIGNER</small></a>
+        <a className="brand" href="#inicio" aria-label="Sindy_Designer, início"><span><BrandName /></span><small>LASH DESIGNER</small></a>
         <nav aria-label="Menu principal"><a href="#catalogo">Serviços</a><a className="nav-booking" href="#catalogo">Agendar atendimento</a></nav>
       </header>
       <main>
         <section className="hero" id="inicio" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">BELEZA · ELEGÂNCIA · AUTOESTIMA</p>
-            <h1 id="hero-title">Sindy_Designer</h1>
+            <h1 id="hero-title"><BrandName /></h1>
             <h2>Seu olhar,<br /><em>sua essência.</em></h2>
             <p className="hero-description">Realce sua beleza com um atendimento delicado e um olhar pensado para você.</p>
             <a className="button primary hero-button" href="#catalogo">Ver catálogo <Sparkles size={17} strokeWidth={1.5} /></a>
@@ -142,11 +146,11 @@ export default function Home() {
         </section>
         <section className="care-note" aria-label="Informações sobre o atendimento"><Heart size={23} strokeWidth={1.2} /><div><h2>Um momento só seu.</h2><p>Escolha seu procedimento com calma. O horário será combinado com você após a solicitação.</p></div></section>
       </main>
-      <footer className="site-footer"><a className="brand" href="#inicio"><span>Sindy_Designer</span><small>LASH DESIGNER</small></a><div className="footer-contact"><p>Beleza que respeita a sua essência.</p><a className="contact-link" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Sindy_Designer: ${contactPhone.label}`}><MessageCircle size={15} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a></div><button className="motion-toggle" onClick={() => setMotion(!motion)} aria-pressed={!motion}>{motion ? "Pausar" : "Ativar"} animação da flor</button></footer>
+      <footer className="site-footer"><a className="brand" href="#inicio"><span><BrandName /></span><small>LASH DESIGNER</small></a><div className="footer-contact"><p>Beleza que respeita a sua essência.</p><a className="contact-link" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Sindy_Designer: ${contactPhone.label}`}><MessageCircle size={15} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a></div><button className="motion-toggle" onClick={() => setMotion(!motion)} aria-pressed={!motion}>{motion ? "Pausar" : "Ativar"} animação da flor</button></footer>
       <Dialog open={!!selected} onOpenChange={(open) => { if (!open && !busy) setSelected(null); }}>
         <DialogContent ref={dialogRef} className="checkout-dialog" showCloseButton={false} onEscapeKeyDown={(event) => { if (busy) event.preventDefault(); }} onInteractOutside={(event) => { if (busy) event.preventDefault(); }}>
           <DialogClose className="checkout-close" disabled={busy} aria-label="Fechar checkout"><X size={20} /></DialogClose>
-          <div className="checkout-brand">Sindy_Designer</div>
+          <div className="checkout-brand"><BrandName /></div>
           <DialogTitle className="checkout-title">{step === "success" ? "Solicitação recebida" : step === "review" ? "Confira seu atendimento" : "Seu momento de beleza"}</DialogTitle>
           <DialogDescription className="checkout-description">{step === "success" ? "Seu horário ainda será confirmado." : step === "review" ? "Revise os detalhes antes de enviar." : "Preencha seus dados e escolha o horário desejado."}</DialogDescription>
           <div className="checkout-steps" aria-label="Etapas do checkout"><span className="active">1. Seus dados</span><i /><span className={step !== "details" ? "active" : ""}>2. Resumo</span><i /><span className={step === "success" ? "active" : ""}>3. Pronto</span></div>
