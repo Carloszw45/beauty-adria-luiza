@@ -87,7 +87,7 @@ h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500}
 .service-duration{display:flex;align-items:center;gap:6px;font-size:12px;color:#8a7867}
 .service-bottom{margin-top:20px;display:flex;align-items:flex-start;flex-direction:column;gap:15px}
 .service-bottom strong{font-size:23px;font-weight:600;color:#342323;letter-spacing:-.04em}
-.service-bottom .button{width:100%;font-size:14px;padding:12px 17px}
+.service-bottom .button{width:100%;font-size:14px;padding:12px 17px;gap:8px}
 .card-brasileiro,.card-hollywood{grid-column:span 3;display:flex}
 .card-brasileiro .service-visual,.card-hollywood .service-visual{width:40%;min-height:245px;flex-shrink:0}
 .card-brasileiro .service-body,.card-hollywood .service-body{flex:1}
@@ -114,60 +114,6 @@ h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500}
 .footer-contact{text-align:center}
 .footer-contact .contact-link{margin-top:4px}
 .motion-toggle{border:0;background:none;font-size:12px;text-decoration:underline;text-underline-offset:4px;color:#89705a;padding:10px 0}
-.checkout-dialog{display:block!important;max-width:530px!important;width:calc(100% - 32px)!important;max-height:90dvh;overflow-y:auto;border-radius:25px!important;border:1px solid #d9c3a1!important;padding:32px!important;background:#fffdf9!important;box-shadow:0 30px 100px #39231630!important;color:var(--foreground);gap:0!important}
-.checkout-close{position:absolute;right:17px;top:17px;display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:0;background:#f3e9db;border-radius:50%;color:#75513f}
-.checkout-brand{font-family:Italianno,Georgia,serif;font-size:35px;color:var(--wine);line-height:1.1;margin-bottom:12px}
-.checkout-title{font-family:Cormorant,Georgia,serif!important;font-weight:500!important;line-height:1.12!important;font-size:32px!important;color:var(--wine)}
-.checkout-description{color:#847268!important;font-size:14px!important;line-height:1.65;margin-top:8px}
-.checkout-steps{display:flex;align-items:center;gap:9px;font-size:12px;color:#a29385;margin:23px 0}
-.checkout-steps .active{color:var(--wine);font-weight:600}
-.checkout-steps i{flex:1;height:1px;background:#e3d5c4}
-.selected-service{display:flex;align-items:center;gap:11px;background:#f6eedf;border:1px solid #ebdfc9;padding:12px;border-radius:14px;margin-bottom:20px}
-.selected-service .photo-circle,.selected-service .monogram{width:54px}
-.selected-service .monogram span{font-size:31px}
-.selected-service .monogram small{display:none}
-.selected-service>div:nth-child(2){display:flex;flex-direction:column;min-width:0;flex:1}
-.selected-service>div:nth-child(2)>span{font-size:10px;letter-spacing:.08em;color:#917246}
-.selected-service strong{font-family:Cormorant,Georgia,serif;font-size:21px;font-weight:500;line-height:1.2;color:var(--wine)}
-.selected-service small{font-size:12px;color:#96816a;margin-top:3px}
-.selected-service>b{font-size:15px;font-weight:600;white-space:nowrap}
-.checkout-form label{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;margin-top:14px}
-.checkout-form input{width:100%;min-width:0;height:47px;padding:10px 13px;background:#fffefa;border:1px solid #ded0bd;border-radius:9px;font-family:Manrope,Arial,sans-serif;font-size:16px;font-weight:400;color:#432e26;transition:border .2s}
-.checkout-form input::placeholder{font-size:14px;color:#a19281}
-.checkout-form input:focus{border-color:#b89559;outline:2px solid #b8955925;outline-offset:1px}
-.field-row{display:grid;grid-template-columns:1.1fr 1fr;gap:13px}
-.field-hint{font-size:12px;line-height:1.65;color:#8e7865;margin:12px 0}
-.checkout-submit{width:100%;margin-top:14px;min-height:47px}
-.privacy-note{display:flex;align-items:flex-start;justify-content:center;gap:6px;font-size:12px;line-height:1.65;color:#9b8b7e;margin-top:12px}
-.privacy-note svg{flex-shrink:0;margin-top:2px}
-.checkout-error{padding:10px 13px;margin:12px 0 0;border:1px solid #b328403b;background:#b3284008;color:#97283b;border-radius:8px;font-size:14px;line-height:1.65}
-.order-service{padding:14px 17px;background:#f6eedf;border-radius:12px;display:flex;flex-direction:column;gap:3px}
-.order-service>span{font-size:12px;color:#927c61}
-.order-service>strong{font-family:Cormorant,Georgia,serif;font-size:27px;font-weight:500;color:var(--wine)}
-.order-details{margin:20px 0}
-.order-details>div{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin:10px 0;font-size:14px}
-.order-details dt{color:#947e69;flex-shrink:0}
-.order-details dd{margin:0;text-align:right;overflow-wrap:anywhere}
-.payment-note{display:flex;align-items:center;gap:13px;border:1px solid #e5d7c2;background:#fcf8f0;padding:15px;border-radius:11px;color:#927045}
-.payment-note svg{flex-shrink:0}
-.payment-note strong{font-size:14px;font-weight:600;color:#6f533c}
-.payment-note p{font-size:12px;margin-top:3px;color:#9d8b77}
-.order-total{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:20px 0 9px;font-size:14px;color:#776557}
-.order-total strong{font-size:28px;color:var(--wine);letter-spacing:-.05em;font-weight:600}
-.text-button{width:100%;color:#8f7154;border:0;background:transparent;font-size:14px;margin-top:3px}
-.text-button:hover{text-decoration:underline;transform:none}
-.outline{background:transparent;border-color:#b09263;color:#816137}
-.outline:hover{background:#f7eedf}
-.checkout-success{text-align:center}
-.success-icon{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:8px auto 19px;background:#f1e5ce;color:#907340}
-.checkout-success>p{font-size:16px;color:#7b6251}
-.checkout-success .success-copy{font-size:14px;line-height:1.8;margin:10px auto 20px;color:#938072;max-width:350px}
-.receipt-card{border:1px dashed #c8ae82;background:#faf4e8;border-radius:13px;padding:19px}
-.receipt-card>span{font-size:12px;letter-spacing:.06em;color:#9b7e52}
-.receipt-card h3{font-size:27px;color:var(--wine);margin:8px 0 5px}
-.receipt-card p{font-size:14px;color:#937a63}
-.receipt-card>strong{display:block;color:var(--wine);font-size:26px;margin-top:11px}
-.receipt-card small{display:block;font-size:12px;color:#a18a71}
 @media(min-width:1450px){.botanical-background img{right:calc((100vw - 1280px)/2 - 140px);width:560px}}
 @media(max-width:1000px){.hero{gap:25px;margin-top:45px;width:calc(100% - 72px)}.hero h1{font-size:97px}.hero h2{font-size:49px}.hero-photo{width:270px}.hero-visual{min-height:415px}.hero-orbit{inset:43px 0 55px}.hero-seal{right:-5px;bottom:52px;width:96px;height:96px}.service-grid{gap:17px}.service-body{padding:22px 17px 19px}.service-body h3{font-size:25px}.service-visual .photo-circle{width:125px}.card-brasileiro .service-visual,.card-hollywood .service-visual{width:35%}.card-brasileiro .photo-circle,.card-hollywood .photo-circle{width:110px}.service-bottom strong{font-size:21px}}
 @media(max-width:720px){
@@ -176,19 +122,19 @@ h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500}
 .hero-visual{min-height:265px;width:285px;max-width:100%;margin:12px auto 0}.hero-photo{width:213px;outline-width:6px}.hero-orbit{inset:8px 21px 26px}.hero-seal{width:77px;height:77px;right:8px;bottom:36px;gap:5px}.hero-seal svg{width:15px;height:15px}.hero-seal span{font-size:14px}.photo-caption{font-size:17px;bottom:-8px}
 .signature-line{width:calc(100% - 48px);gap:17px}.catalog{width:calc(100% - 36px);margin:42px auto 0}.section-heading{margin-bottom:27px}.section-heading .eyebrow{font-size:12px}.section-heading h2{font-size:43px;margin:9px 0 12px}.section-heading>p:last-child{font-size:14px;max-width:280px;margin:0 auto}
 .service-grid{display:flex;flex-direction:column;gap:19px}.service-card,.card-brasileiro,.card-hollywood{display:grid;grid-template-columns:34% minmax(0,1fr);border-radius:23px;min-height:230px}.service-visual,.card-brasileiro .service-visual,.card-hollywood .service-visual{width:100%;min-height:230px;align-self:stretch;padding:20px 10px 50px}.service-visual .photo-circle,.card-brasileiro .photo-circle,.card-hollywood .photo-circle{width:calc(100% - 5px);max-width:127px}.service-category{font-size:10px;letter-spacing:.03em;left:7px;right:7px;bottom:18px;line-height:1.5}.service-visual .monogram{width:calc(100% - 5px);max-width:127px}.monogram span{font-size:63px}.monogram small{font-size:8px}
-.service-body,.card-brasileiro .service-body,.card-hollywood .service-body{padding:24px 15px 20px}.service-number{font-size:14px;right:12px;top:8px}.service-body h3{font-size:27px;line-height:1.1}.service-body>p{font-size:14px;line-height:1.6;margin:8px 0;min-height:0}.service-duration{font-size:12px;gap:5px}.service-duration svg{width:12px;height:12px}.service-bottom,.card-brasileiro .service-bottom,.card-hollywood .service-bottom{gap:9px;margin-top:11px}.service-bottom strong{font-size:23px}.service-bottom .button{font-size:13px;min-height:43px;padding:10px 12px;max-width:180px}
+.service-body,.card-brasileiro .service-body,.card-hollywood .service-body{padding:24px 15px 20px}.service-number{font-size:14px;right:12px;top:8px}.service-body h3{font-size:27px;line-height:1.1}.service-body>p{font-size:14px;line-height:1.6;margin:8px 0;min-height:0}.service-duration{font-size:12px;gap:5px}.service-duration svg{width:12px;height:12px}.service-bottom,.card-brasileiro .service-bottom,.card-hollywood .service-bottom{gap:9px;margin-top:11px}.service-bottom strong{font-size:22px}.service-bottom .button{font-size:13px;min-height:43px;padding:10px 12px;max-width:180px}
 .catalog-footnote{font-size:12px;line-height:1.65;gap:7px;margin-top:22px;padding:0 7px}.catalog-footnote svg{flex-shrink:0;width:14px}.care-note{margin:44px auto 38px;gap:14px;max-width:380px}.care-note h2{font-size:26px}.care-note p{font-size:14px}
 .site-footer{width:calc(100% - 44px);flex-direction:column;gap:14px;padding:25px 0 18px}.site-footer p{font-size:17px}.motion-toggle{font-size:12px}.botanical-background img{width:335px;right:-102px;top:30vh;opacity:.26}
-.checkout-dialog{padding:26px 21px!important;border-radius:22px!important}.checkout-title{font-size:29px!important}.checkout-steps{font-size:12px;gap:6px}.selected-service>b{font-size:14px}.selected-service strong{font-size:20px}.selected-service{padding:10px;gap:9px}.selected-service .photo-circle,.selected-service .monogram{width:44px}.checkout-brand{font-size:33px}.checkout-description{font-size:14px!important}.field-row{gap:11px}.checkout-close{right:13px;top:13px}
+
 }
-@media(max-width:370px){.hero h1{font-size:80px}.hero h2{font-size:38px}.service-card,.card-brasileiro,.card-hollywood{grid-template-columns:31% minmax(0,1fr)}.service-body,.card-brasileiro .service-body,.card-hollywood .service-body{padding-left:13px;padding-right:12px}.service-body h3{font-size:24px}.service-visual{padding-left:6px;padding-right:6px}.service-category{font-size:10px;letter-spacing:0}.selected-service>b{font-size:13px}.selected-service strong{font-size:18px}.checkout-dialog{padding:24px 17px!important}.brand>span{font-size:30px}.nav-booking{font-size:12px;padding:8px 12px}}
+@media(max-width:370px){.hero h1{font-size:80px}.hero h2{font-size:38px}.service-card,.card-brasileiro,.card-hollywood{grid-template-columns:31% minmax(0,1fr)}.service-body,.card-brasileiro .service-body,.card-hollywood .service-body{padding-left:13px;padding-right:12px}.service-body h3{font-size:24px}.service-visual{padding-left:6px;padding-right:6px}.service-category{font-size:10px;letter-spacing:0}.brand>span{font-size:30px}.nav-booking{font-size:12px;padding:8px 12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.botanical-background img{transform:rotate(-3deg);will-change:auto}}
 
 
-/* Fit the brand and the bouquet card at every size. */
+/* Fit the brand and consultation cards at every size. */
 .hero h1{font-size:clamp(64px,7.6vw,102px);white-space:nowrap}
 .site-header .brand{min-width:0}
-@media(max-width:720px){.site-header .brand{align-items:flex-start;flex:1}.site-header .brand>span{font-size:26px;line-height:1.1}.site-header nav{flex-shrink:0}.hero h1{font-size:clamp(45px,15.5vw,67px)}.checkout-brand{font-size:29px;padding-right:30px}.card-buque-personalizado{grid-template-columns:34% minmax(0,1fr)}.card-buque-personalizado .service-visual{min-height:230px}.card-buque-personalizado .service-body{padding:24px 15px 20px;align-self:stretch}.card-buque-personalizado .service-body h3{font-size:27px}.card-buque-personalizado .service-bottom{flex-direction:column;align-items:flex-start;gap:9px}.card-buque-personalizado .service-bottom .button{width:100%;max-width:180px;gap:7px}.card-buque-personalizado .service-bottom strong{font-size:22px}.bouquet-art{width:calc(100% - 5px);max-width:127px}}
+@media(max-width:720px){.site-header .brand{align-items:flex-start;flex:1}.site-header .brand>span{font-size:26px;line-height:1.1}.site-header nav{flex-shrink:0}.hero h1{font-size:clamp(45px,15.5vw,67px)}.card-buque-personalizado{grid-template-columns:34% minmax(0,1fr)}.card-buque-personalizado .service-visual{min-height:230px}.card-buque-personalizado .service-body{padding:24px 15px 20px;align-self:stretch}.card-buque-personalizado .service-body h3{font-size:27px}.card-buque-personalizado .service-bottom{flex-direction:column;align-items:flex-start;gap:9px}.card-buque-personalizado .service-bottom .button{width:100%;max-width:180px;gap:7px}.card-buque-personalizado .service-bottom strong{font-size:22px}.bouquet-art{width:calc(100% - 5px);max-width:127px}}
 @media(max-width:370px){.site-header .brand>span{font-size:23px}.site-header{gap:12px}.card-buque-personalizado{grid-template-columns:31% minmax(0,1fr)}.card-buque-personalizado .service-body{padding-left:13px;padding-right:12px}.card-buque-personalizado .service-body h3{font-size:24px}}
 
 /* Use a visible underscore because the script font has an empty glyph. */

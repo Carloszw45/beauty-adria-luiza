@@ -1,6 +1,6 @@
 # Sindy_Designer · Lash Designer
 
-Site responsivo com catálogo de cílios, sobrancelhas e buquês personalizados, flor animada ao fundo e checkout de solicitação de atendimento. Os valores dos procedimentos são os fornecidos nas imagens de referência. O Buquê personalizado tem preço sob consulta e botão para solicitar orçamento pelo WhatsApp.
+Site responsivo com catálogo de cílios, sobrancelhas e buquês personalizados e flor animada ao fundo. Todas as opções exibem "Sob consulta" e abrem o WhatsApp para pedir valores e disponibilidade.
 
 ## Publicação no GitHub Pages
 
@@ -23,16 +23,16 @@ npm run build
 
 Envie as alterações em `src/` e `docs/` ao repositório. A publicação pelo branch será atualizada pelo GitHub Pages.
 
-## Checkout
+## Consultas pelo WhatsApp
 
-A cliente escolhe um procedimento, informa nome, WhatsApp, data e horário, revisa os valores e envia a solicitação. O pedido é registrado como pendente na API do site original. Ela pode salvar o resumo em texto. Não há cobrança online nem confirmação automática de horário.
+Todos os cards mostram **Sob consulta**. O botão **Consultar valor** abre o WhatsApp com uma mensagem sobre a opção escolhida. A visitante pode revisar a mensagem e enviá-la no próprio WhatsApp.
 
-O GitHub Pages hospeda o frontend estático; a API e o banco de agendamentos permanecem no servidor original. O código de referência da API está em `backend/`. Nenhum dado de clientes ou credencial é incluído aqui.
+O site não utiliza mais o checkout nem envia solicitações para a API de agendamentos. O código anterior em `backend/` permanece como referência histórica.
 
 ## Arquivos
 
-- `src/App.tsx`: catálogo e checkout.
-- `src/lib/catalog.ts`: procedimentos e preços em centavos.
+- `src/App.tsx`: catálogo e links de consulta pelo WhatsApp.
+- `src/lib/catalog.ts`: procedimentos, descrições e durações.
 - `src/styles.css`: layout, animação e acessibilidade.
 - `public/assets/`: fotos de referência e flor.
 - `docs/`: versão compilada para o GitHub Pages.
