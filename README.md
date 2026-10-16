@@ -1,41 +1,31 @@
-# Geovana Designer · Lash Designer
+# Geovana Designer
 
-Site responsivo com catálogo de cílios, sobrancelhas e buquês personalizados e flor animada ao fundo. Todas as opções exibem "Sob consulta" e abrem o WhatsApp para pedir valores e disponibilidade.
+Site público: https://carloszw45.github.io/beauty-adria-luiza/
 
-## Publicação no GitHub Pages
+Catálogo de cílios, sobrancelhas e buquês personalizados com visual vinho e creme, seis imagens ilustrativas diferentes, três itens por linha no celular e consultas pelo WhatsApp **(31) 99749-1835**. Todos os valores são sob consulta.
 
-A pasta `docs/` contém a versão pronta para publicar. Em **Settings → Pages**, use **Deploy from a branch**, selecione **main** e a pasta **/docs**, e clique em **Save**. Os arquivos usam caminhos relativos para funcionar no endereço do repositório.
+## Site atual e publicação
 
-## Desenvolvimento
+A pasta `docs/` é o código completo e pronto do site atual. É uma aplicação estática sem dependências de compilação. O GitHub Pages publica o branch `main`, pasta `/docs`. Enviar alterações nessa pasta atualiza o site.
 
-Requer Node.js 22.13 ou superior.
+- `docs/index.html`: conteúdo, catálogo, metadados e formulário de consulta.
+- `docs/styles.css`: visual e layouts responsivos.
+- `docs/catalog.mjs`: catálogo, contato e mensagens para o WhatsApp.
+- `docs/app.mjs`: filtros, seleção de itens, quantidades e interações.
+- `docs/assets/`: fotografias ilustrativas e fontes locais otimizadas.
+- `design-assets.json`: prompts das oito imagens exclusivas, geradas com ImageGen.
+
+A seleção é guardada no navegador. Nome, data e observações são enviados ao WhatsApp quando o visitante inicia a consulta. Valores, disponibilidade, pedidos e agendamentos são confirmados na conversa. A página não cobra pagamentos.
+
+## Verificação
 
 ```sh
-npm ci
-npm run dev
+node --check docs/app.mjs
+node --check docs/catalog.mjs
 ```
 
-Para atualizar a versão publicada:
+A animação respeita movimento reduzido e pode ser pausada no rodapé. Cada card tem uma imagem própria; o catálogo identifica as imagens como ilustrativas. As fontes e suas licenças estão hospedadas junto ao site.
 
-```sh
-npm run build
-```
+## Histórico
 
-Envie as alterações em `src/` e `docs/` ao repositório. A publicação pelo branch será atualizada pelo GitHub Pages.
-
-## Consultas pelo WhatsApp
-
-Todos os cards mostram **Sob consulta**. O botão **Consultar valor** abre o WhatsApp com uma mensagem sobre a opção escolhida. A visitante pode revisar a mensagem e enviá-la no próprio WhatsApp.
-
-O site não utiliza mais o checkout nem envia solicitações para a API de agendamentos. O código anterior em `backend/` permanece como referência histórica.
-
-## Arquivos
-
-- `src/App.tsx`: catálogo e links de consulta pelo WhatsApp.
-- `src/lib/catalog.ts`: procedimentos, descrições e durações.
-- `src/styles.css`: layout, animação e acessibilidade.
-- `public/assets/`: fotos de referência e flor.
-- `docs/`: versão compilada para o GitHub Pages.
-- `licenses/`: licenças das fontes.
-
-A animação respeita a preferência de movimento reduzido e pode ser pausada no rodapé. As imagens dos procedimentos foram fornecidas pelo usuário. A flor foi criada para este site. As fontes Cormorant, Italianno e Manrope são distribuídas sob a SIL Open Font License.
+O endereço original do repositório foi mantido para preservar o link da loja. Os diretórios `src/`, `public/` e `backend/` pertencem à versão anterior e permanecem preservados. Para atualizar o site atual, edite os arquivos em `docs/`.

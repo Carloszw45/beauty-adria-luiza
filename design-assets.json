@@ -1,0 +1,75 @@
+[
+  {
+    "key": "hero",
+    "prompt": "Use case: photorealistic-natural. Asset type: vertical website hero photo. An anonymous adult Brazilian woman with medium warm skin, dark brown hair in a loosely elegant updo, wearing a high neck deep burgundy silk blouse and small understated gold earrings. Bust portrait, facing and gazing to the right in a three-quarter profile, expressive defined eyes and beautiful natural brows. Warm muted terracotta studio background, soft directional light, authentic beauty fashion campaign. Head and upper body fully within the frame with 12 percent headroom, 2:3 portrait composition. No flowers or objects. Create ONE photorealistic editorial photograph, not a collage, no text, no logo, no watermark, no UI. Preserve real skin texture and believable anatomy; luxury beauty editorial, restrained warm cream, dusty rose, burgundy palette. Very sharp focal details, professional lens, no plastic skin. This is an illustrative photo asset for a Brazilian beauty atelier website.",
+    "tool": "ImageGen (built-in)",
+    "published_files": [
+      "hero-1024.webp",
+      "hero-480.webp",
+      "hero-800.webp"
+    ]
+  },
+  {
+    "key": "henna",
+    "prompt": "Use case: photorealistic-natural. Asset type: square service photograph, eyebrow design with henna. Tight macro of the single left open eye and beautiful precisely shaped dark eyebrow of an adult woman with warm tan skin, brown iris. Show soft full henna brow shading with individual visible hairs and natural sharp lower edge, subtle fine eyelashes. Mostly eye and eyebrow in horizontal diagonal composition within a square. Soft nude beige background and warm natural side light. No hands or tools. Create ONE photorealistic editorial photograph, not a collage, no text, no logo, no watermark, no UI. Preserve real skin texture and believable anatomy; luxury beauty editorial, restrained warm cream, dusty rose, burgundy palette. Very sharp focal details, professional lens, no plastic skin. This is an illustrative photo asset for a Brazilian beauty atelier website.",
+    "tool": "ImageGen (built-in)",
+    "published_files": [
+      "henna-400.webp",
+      "henna-800.webp"
+    ]
+  },
+  {
+    "key": "natural",
+    "prompt": "Use case: photorealistic-natural. Asset type: square service photograph, natural eyebrow design. A cropped beauty close-up of an adult freckled fair skin woman's right eye, light hazel iris, fluffy naturally shaped light brown eyebrow with fine individual hairs, minimal makeup. Subject looking slightly sideways; skin texture, pores and freckles. Cream daylight background. Clearly a different woman and different angle than a dark henna eyebrow photo. No hands or tools. Create ONE photorealistic editorial photograph, not a collage, no text, no logo, no watermark, no UI. Preserve real skin texture and believable anatomy; luxury beauty editorial, restrained warm cream, dusty rose, burgundy palette. Very sharp focal details, professional lens, no plastic skin. This is an illustrative photo asset for a Brazilian beauty atelier website.",
+    "tool": "ImageGen (built-in)",
+    "published_files": [
+      "natural-400.webp",
+      "natural-800.webp"
+    ]
+  },
+  {
+    "key": "brasileiro",
+    "prompt": "Use case: photorealistic-natural. Asset type: square service photograph, Brazilian eyelash extensions. Macro close-up of an adult medium-brown skin woman's gently open almond-shaped dark brown eye viewed three-quarter angle from above, showing a delicate full set of fine separated Y style eyelash fans, elegant light wispy volume, not exaggerated. Warm brown eyebrow at top, healthy natural skin texture, soft dusty rose backdrop, daylight. Only one eye and cheek visible. No tools, no hands. Create ONE photorealistic editorial photograph, not a collage, no text, no logo, no watermark, no UI. Preserve real skin texture and believable anatomy; luxury beauty editorial, restrained warm cream, dusty rose, burgundy palette. Very sharp focal details, professional lens, no plastic skin. This is an illustrative photo asset for a Brazilian beauty atelier website.",
+    "tool": "ImageGen (built-in)",
+    "published_files": [
+      "brasileiro-400.webp",
+      "brasileiro-800.webp"
+    ]
+  },
+  {
+    "key": "hollywood",
+    "prompt": "Use case: photorealistic-natural. Asset type: square service photograph, Hollywood volume eyelash extensions. Extreme clean beauty close-up of an adult olive skin woman's closed right eye viewed from a low diagonal side angle. Dark dense beautifully fanned eyelash extensions, elegant dramatic fuller volume, delicate perfectly curved lash line. Eyebrow visible above, slight nude satin eyeshadow, champagne warm studio background. Face fills frame. No tools, no hands. Create ONE photorealistic editorial photograph, not a collage, no text, no logo, no watermark, no UI. Preserve real skin texture and believable anatomy; luxury beauty editorial, restrained warm cream, dusty rose, burgundy palette. Very sharp focal details, professional lens, no plastic skin. This is an illustrative photo asset for a Brazilian beauty atelier website.",
+    "tool": "ImageGen (built-in)",
+    "published_files": [
+      "hollywood-400.webp",
+      "hollywood-800.webp"
+    ]
+  },
+  {
+    "key": "remocao",
+    "prompt": "Use case: photorealistic-natural. Asset type: square service photograph for gentle eyelash extension removal. A realistic close-up at a professional beauty appointment: adult woman's peacefully closed eye with a clean small white crescent under-eye pad and a burgundy-gloved professional hand holding a tiny soft white microbrush delicately near lash tips. No sharp tweezers near the eye, no liquid droplets. Cream treatment bed, very clean scene, shallow depth of field. Delicate lashes, healthy light-medium skin. Create ONE photorealistic editorial photograph, not a collage, no text, no logo, no watermark, no UI. Preserve real skin texture and believable anatomy; luxury beauty editorial, restrained warm cream, dusty rose, burgundy palette. Very sharp focal details, professional lens, no plastic skin. This is an illustrative photo asset for a Brazilian beauty atelier website.",
+    "tool": "ImageGen (built-in)",
+    "published_files": [
+      "remocao-400.webp",
+      "remocao-800.webp"
+    ]
+  },
+  {
+    "key": "buque",
+    "prompt": "Use case: product-mockup. Asset type: square catalog photograph of a personalized flower bouquet. A real beautifully hand-tied generous bouquet of deep red roses, dusty blush roses, a few ivory flowers and fresh dark eucalyptus leaves, wrapped in elegant matte cream paper, tied with a burgundy silk bow. Resting diagonally on a warm pale rose plaster tabletop, soft afternoon sunlight and gentle shadows. Complete bouquet and bow visible with breathing room. Luxury florist editorial, crisp real petal texture. Create ONE photorealistic editorial photograph, not a collage, no text, no logo, no watermark, no UI. Preserve real skin texture and believable anatomy; luxury beauty editorial, restrained warm cream, dusty rose, burgundy palette. Very sharp focal details, professional lens, no plastic skin. This is an illustrative photo asset for a Brazilian beauty atelier website.",
+    "tool": "ImageGen (built-in)",
+    "published_files": [
+      "buque-400.webp",
+      "buque-800.webp"
+    ]
+  },
+  {
+    "key": "floral",
+    "prompt": "Use case: product-mockup. Asset type: tall decorative floral photograph for a luxury beauty website footer. One lush deep burgundy peony with realistic layered silky petals and two dark green leaves, cropped close, placed in the lower half of frame against a seamless very dark wine background #300711, painterly chiaroscuro but photographic, low warm side light, premium quiet still life. Top third mostly dark negative space. 2:3 portrait composition. No person, no vessel, no bouquet wrapping. Create ONE photorealistic editorial photograph, not a collage, no text, no logo, no watermark, no UI. Preserve real skin texture and believable anatomy; luxury beauty editorial, restrained warm cream, dusty rose, burgundy palette. Very sharp focal details, professional lens, no plastic skin. This is an illustrative photo asset for a Brazilian beauty atelier website.",
+    "tool": "ImageGen (built-in)",
+    "published_files": [
+      "floral-500.webp",
+      "floral-800.webp"
+    ]
+  }
+]
