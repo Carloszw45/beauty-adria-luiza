@@ -1,4 +1,4 @@
-# Designer · Lash Designer
+# Geovana Designer · Lash Designer
 
 Site responsivo com catálogo de cílios, sobrancelhas e buquês personalizados e flor animada ao fundo. Todas as opções exibem "Sob consulta" e abrem o WhatsApp para pedir valores e disponibilidade.
 
