@@ -30,13 +30,13 @@ export function whatsappUrl(message) {
 }
 
 export function itemMessage(product) {
-  return `Olá, Geovana! Tenho interesse em ${product.name}. Poderia me informar o valor e a disponibilidade?`;
+  return `Olá, Sindy! Tenho interesse em ${product.name}. Poderia me informar o valor e a disponibilidade?`;
 }
 
 export function selectionMessage(raw, details = {}) {
   const selection = sanitizeSelection(raw);
   if (!selection.length) return '';
-  const lines = ['Olá, Geovana! Gostaria de consultar os seguintes itens:', ''];
+  const lines = ['Olá, Sindy! Gostaria de consultar os seguintes itens:', ''];
   if (details.name?.trim()) lines.push(`Meu nome: ${details.name.trim().slice(0, 80)}`, '');
   for (const row of selection) {
     const product = PRODUCTS.find(item => item.id === row.id);

@@ -1,4 +1,4 @@
-# Geovana Designer
+# Sindy Designer
 
 Site público: https://carloszw45.github.io/beauty-adria-luiza/
 

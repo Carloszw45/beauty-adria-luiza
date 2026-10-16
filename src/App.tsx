@@ -6,14 +6,14 @@ import { services, type Service } from "@/lib/catalog";
 
 const contactPhone = { label: "(31) 9314-7285", href: "https://wa.me/553193147285" };
 function quoteHref(name: string) {
-  return `${contactPhone.href}?text=${encodeURIComponent(`Olá! Gostaria de consultar o valor de ${name} na Geovana Designer.`)}`;
+  return `${contactPhone.href}?text=${encodeURIComponent(`Olá! Gostaria de consultar o valor de ${name} na Sindy Designer.`)}`;
 }
 function BrandName() {
-  return <>Geovana Designer</>;
+  return <>Sindy Designer</>;
 }
 
 function ServicePhoto({ service, className = "" }: { service: Service; className?: string }) {
-  if (service.photoTop === null) return <div className={`monogram ${className}`} aria-hidden="true"><span>GD</span><small>LASH DESIGNER</small></div>;
+  if (service.photoTop === null) return <div className={`monogram ${className}`} aria-hidden="true"><span>SD</span><small>LASH DESIGNER</small></div>;
   return <div className={`photo-circle ${className}`}><img src={`${import.meta.env.BASE_URL}assets/service-reference.jpg`} alt={service.alt} width="691" height="1536" style={{ top: `${-(service.photoTop / 218) * 100}%` }} /></div>;
 }
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
       <div className="botanical-background" aria-hidden="true"><img src={`${import.meta.env.BASE_URL}assets/flower.webp`} width="1024" height="1536" alt="" /></div>
       <a className="skip-link" href="#catalogo">Ir para o catálogo</a>
       <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Geovana Designer, início"><span><BrandName /></span><small>LASH DESIGNER</small></a>
+        <a className="brand" href="#inicio" aria-label="Sindy Designer, início"><span><BrandName /></span><small>LASH DESIGNER</small></a>
         <nav aria-label="Menu principal"><a href="#catalogo">Catálogo</a><a className="nav-booking" href={contactPhone.href} target="_blank" rel="noopener noreferrer">Consultar valores</a></nav>
       </header>
       <main>
@@ -35,7 +35,7 @@ export default function Home() {
             <p className="hero-description">Realce sua beleza com um atendimento delicado e um olhar pensado para você.</p>
             <a className="button primary hero-button" href="#catalogo">Ver catálogo <Sparkles size={17} strokeWidth={1.5} /></a>
             <div className="hero-note"><span /> Cílios, sobrancelhas &amp; buquês</div>
-            <a className="contact-link hero-contact" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Geovana Designer: ${contactPhone.label}`}><MessageCircle size={16} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a>
+            <a className="contact-link hero-contact" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Sindy Designer: ${contactPhone.label}`}><MessageCircle size={16} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a>
           </div>
           <div className="hero-visual" aria-label="Detalhe do procedimento de extensão de cílios">
             <div className="hero-orbit" aria-hidden="true" />
@@ -61,7 +61,7 @@ export default function Home() {
         </section>
         <section className="care-note" aria-label="Informações sobre o atendimento"><Heart size={23} strokeWidth={1.2} /><div><h2>Um momento só seu.</h2><p>Consulte valores e disponibilidade pelo WhatsApp. Cada detalhe será combinado com você.</p></div></section>
       </main>
-      <footer className="site-footer"><a className="brand" href="#inicio"><span><BrandName /></span><small>LASH DESIGNER</small></a><div className="footer-contact"><p>Beleza que respeita a sua essência.</p><a className="contact-link" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Geovana Designer: ${contactPhone.label}`}><MessageCircle size={15} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a></div><button className="motion-toggle" onClick={() => setMotion(!motion)} aria-pressed={!motion}>{motion ? "Pausar" : "Ativar"} animação da flor</button></footer>
+      <footer className="site-footer"><a className="brand" href="#inicio"><span><BrandName /></span><small>LASH DESIGNER</small></a><div className="footer-contact"><p>Beleza que respeita a sua essência.</p><a className="contact-link" href={contactPhone.href} target="_blank" rel="noopener noreferrer" aria-label={`Conversar pelo WhatsApp com Sindy Designer: ${contactPhone.label}`}><MessageCircle size={15} strokeWidth={1.5} aria-hidden="true" /> WhatsApp: {contactPhone.label}</a></div><button className="motion-toggle" onClick={() => setMotion(!motion)} aria-pressed={!motion}>{motion ? "Pausar" : "Ativar"} animação da flor</button></footer>
     </div>
   );
 }
